@@ -22,6 +22,7 @@ target 'speedtracking' do
     :path => config[:reactNativePath],
     :hermes_enabled => podfile_properties['expo.jsEngine'] == 'hermes',
     :fabric_enabled => flags[:fabric_enabled],
+    :flipper_configuration => FlipperConfiguration.enabled(["release"], { 'Flipper' => '0.93' }),
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/..",
     #
